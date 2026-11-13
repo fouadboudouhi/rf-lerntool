@@ -1,0 +1,12 @@
+# Statisches Deployment auf GitLab Pages (Pages muss auf der Instanz aktiviert sein)
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir public
+    - cp -r index.html styles.css cheatsheet.md lib lessons vendor public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

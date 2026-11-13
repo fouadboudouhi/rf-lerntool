@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robot Framework Lerntool</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button id="btn-menu" class="icon-btn" title="Lektionen">☰</button>
+  <div class="brand">🤖 Robot Framework <span>Lerntool</span></div>
+  <button id="btn-cheatsheet" class="btn" title="Spickzettel (Taste ?)">📋 Spickzettel</button>
+  <div id="status" data-state="loading">Laufzeit wird gestartet …</div>
+</header>
+
+<div id="cheatsheet" hidden>
+  <div class="sheet-backdrop"></div>
+  <aside class="sheet" role="dialog" aria-modal="true" aria-label="Spickzettel">
+    <div class="sheet-head">
+      <strong>Spickzettel</strong>
+      <div class="sheet-actions">
+        <button id="btn-cheatsheet-print" class="btn">Drucken</button>
+        <button id="btn-cheatsheet-close" class="btn">Schließen</button>
+      </div>
+    </div>
+    <div id="cheatsheet-body" class="md"></div>
+  </aside>
+</div>
+
+<aside id="sidebar">
+  <div class="progress">
+    <div class="progress-track"><div id="progress-bar" class="progress-fill"></div></div>
+    <div id="progress-text" class="muted">0 / 0 Lektionen</div>
+  </div>
+  <nav id="nav"></nav>
+  <div class="sidebar-footer">
+    <button id="btn-reset-progress" class="link-btn">Fortschritt zurücksetzen</button>
+  </div>
+</aside>
+
+<main>
+  <section id="lesson-pane">
+    <div class="lesson-head">
+      <div id="lesson-chapter" class="muted"></div>
+      <h1 id="lesson-title">…</h1>
+    </div>
+    <article id="lesson-text" class="md"></article>
+    <div id="hints" hidden></div>
+    <div class="lesson-nav">
+      <button id="btn-prev" class="btn">← Zurück</button>
+      <button id="btn-next" class="btn">Weiter →</button>
+    </div>
+  </section>
+
+  <section id="editor-pane">
+    <div class="toolbar">
+      <div id="file-tabs" class="file-tabs"></div>
+      <div class="actions">
+        <button id="btn-hint" class="btn" hidden>Hinweis</button>
+        <button id="btn-solution" class="btn" hidden>Lösung</button>
+        <button id="btn-reset" class="btn" title="Auf Startcode zurücksetzen">Zurücksetzen</button>
+        <span id="run-modes"></span>
+      </div>
+    </div>
+    <div id="editor"></div>
+    <div id="results">
+      <div class="result-tabs">
+        <button data-tab="checks" class="active">Prüfung</button>
+        <button data-tab="console">Konsole</button>
+        <button data-tab="log">Log</button>
+      </div>
+      <div id="verdict" class="verdict" hidden></div>
+      <div class="result-panel" data-panel="checks"><div id="checks"></div></div>
+      <div class="result-panel" data-panel="console" hidden><pre id="console"></pre></div>
+      <div class="result-panel" data-panel="log" hidden><iframe id="log-frame" title="log.html" sandbox="allow-scripts"></iframe></div>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="lib/app.js"></script>
+</body>
+</html>

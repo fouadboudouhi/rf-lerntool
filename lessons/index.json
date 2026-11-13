@@ -1,0 +1,72 @@
+{
+  "chapters": [
+    {
+      "title": "1. Erste Schritte",
+      "lessons": [
+        "01-grundlagen/01-erster-test.md",
+        "01-grundlagen/02-leerzeichen.md",
+        "01-grundlagen/03-should-keywords.md",
+        "01-grundlagen/04-fehlschlaege-lesen.md",
+        "01-grundlagen/05-dokumentation-tags.md",
+        "01-grundlagen/06-woher-die-keywords-kommen.md"
+      ]
+    },
+    {
+      "title": "2. Variablen",
+      "lessons": [
+        "02-variablen/01-skalare.md",
+        "02-variablen/02-listen-dicts.md",
+        "02-variablen/03-zuweisung.md",
+        "02-variablen/04-ausdruecke.md"
+      ]
+    },
+    {
+      "title": "3. Eigene Keywords",
+      "lessons": [
+        "03-keywords/01-erstes-keyword.md",
+        "03-keywords/02-argumente.md",
+        "03-keywords/03-rueckgabewerte.md",
+        "03-keywords/04-setup-teardown.md",
+        "03-keywords/05-test-templates.md"
+      ]
+    },
+    {
+      "title": "4. Kontrollstrukturen",
+      "lessons": [
+        "04-kontrollstrukturen/01-if.md",
+        "04-kontrollstrukturen/02-for.md",
+        "04-kontrollstrukturen/03-while.md",
+        "04-kontrollstrukturen/04-try-except.md"
+      ]
+    },
+    {
+      "title": "5. Struktur & Erweiterung",
+      "lessons": [
+        "05-struktur/01-resource-dateien.md",
+        "05-struktur/02-python-keywords.md",
+        "05-struktur/03-keyword-doku.md"
+      ]
+    },
+    {
+      "title": "6. Ausführen & Werkzeuge",
+      "lessons": [
+        "06-ausfuehren/01-tests-ausfuehren.md",
+        "06-ausfuehren/02-tags-als-filter.md",
+        "06-ausfuehren/03-log-level.md",
+        "06-ausfuehren/04-robocop.md"
+      ]
+    },
+    {
+      "title": "7. Abschluss",
+      "lessons": [
+        "07-abschluss/01-abschlussaufgabe.md"
+      ]
+    },
+    {
+      "title": "Frei ausprobieren",
+      "lessons": [
+        "00-spielwiese/01-spielwiese.md"
+      ]
+    }
+  ]
+}
